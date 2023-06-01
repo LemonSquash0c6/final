@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+  <h2>Register</h2>
+  <form method="post">
+    {% csrf_token %}
+
+      <div class="form-field">
+    {{ form.username.label_tag }}
+    {{ form.username }}
+      </div>
+
+      <div class="form-field">
+    {{ form.password.label_tag }}
+    {{ form.password }}
+      </div>
+
+    <button type="submit">Register</button>
+  </form>
+{% endblock %}
+</body>
+</html>
